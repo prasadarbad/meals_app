@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:lottie/lottie.dart';
 import 'package:meals_app/screens/filters_screen.dart';
 
 class MainDrawer extends StatelessWidget {
@@ -49,6 +50,14 @@ class MainDrawer extends StatelessWidget {
           buildListTile('Filters', Icons.settings, () {
             Navigator.of(context).pushReplacementNamed(FilterScreen.routeName);
           }),
+          SizedBox(
+            height: 100,
+          ),
+          Container(
+            height: 200,
+            width: 200,
+            child: Lottie.asset('assets/lottie/94436-cooking-animation.json'),
+          ),
         ],
       ),
     );

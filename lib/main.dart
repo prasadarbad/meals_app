@@ -90,7 +90,8 @@ class _MyAppState extends State<MyApp> {
       ),
       //initialRoute: '/',
       routes: {
-        '/': (ctx) => TabScreen(_favoriteMeals),
+        '/': (ctx) => Splash(_favoriteMeals),
+        TabScreen.routeName: (ctx) => TabScreen(_favoriteMeals),
         CategoryMealsScreen.routeName: (ctx) =>
             CategoryMealsScreen(_availableMeals),
         MealDetailScreen.routeName: (ctx) =>

@@ -6,6 +6,7 @@ import '../models/meal.dart';
 
 class TabScreen extends StatefulWidget {
   List<Meal> favoriteMeals;
+  static const routeName = '/tabs-screen';
   TabScreen(this.favoriteMeals);
   @override
   _TabScreenState createState() => _TabScreenState();

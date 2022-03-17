@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
 import 'package:meals_app/screens/filters_screen.dart';
+import 'package:meals_app/screens/tabs_screen.dart';
 
 class MainDrawer extends StatelessWidget {
   Widget buildListTile(String title, IconData icon, Function tapHandler) {
@@ -45,7 +46,7 @@ class MainDrawer extends StatelessWidget {
             height: 20,
           ),
           buildListTile('Meals', Icons.restaurant, () {
-            Navigator.of(context).pushReplacementNamed('/');
+            Navigator.of(context).pushReplacementNamed(TabScreen.routeName);
           }),
           buildListTile('Filters', Icons.settings, () {
             Navigator.of(context).pushReplacementNamed(FilterScreen.routeName);

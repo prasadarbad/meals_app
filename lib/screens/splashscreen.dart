@@ -10,6 +10,9 @@ import 'package:meals_app/screens/tabs_screen.dart';
 
 class Splash extends StatefulWidget {
   static const routeName = '/splash-screen';
+  final List<Meal> favoritemeals;
+
+  Splash(this.favoritemeals);
   @override
   _SplashState createState() => _SplashState();
 }
@@ -26,7 +29,7 @@ class _SplashState extends State<Splash> {
 
     Navigator.pushReplacement(
       context,
-      MaterialPageRoute(builder: (context) => MyApp()),
+      MaterialPageRoute(builder: (context) => TabScreen(widget.favoritemeals)),
     );
   }
 
